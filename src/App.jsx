@@ -1,7 +1,7 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import "./App.css";
 import Header from "./components/Header";
-import AdminControls from "./components/layout/AdminControls";
+import AdminControls from "./components/Layout/AdminControls";
 import ProfileGrid from "./components/profile/ProfileGrid";
 import { useProfiles } from "./hooks/useProfiles";
 import ProfileDetailsPage from "./pages/ProfileDetailsPage";
