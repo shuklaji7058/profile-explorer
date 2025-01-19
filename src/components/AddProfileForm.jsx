@@ -8,7 +8,7 @@ const AddProfileForm = ({ onAddProfile }) => {
     name: "",
     description: "",
     address: "",
-    image: "/src/assets/images/default.png",
+    image: "/images/default.png",
     coordinates: {
       lat: 0,
       lng: 0,
