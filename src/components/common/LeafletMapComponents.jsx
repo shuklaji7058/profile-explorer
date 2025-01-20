@@ -1,6 +1,18 @@
+import L from "leaflet";
+import markerIcon2x from "leaflet/dist/images/marker-icon-2x.png";
+import markerIcon from "leaflet/dist/images/marker-icon.png";
+import markerShadow from "leaflet/dist/images/marker-shadow.png";
 import "leaflet/dist/leaflet.css";
 import React, { useEffect } from "react";
 import { MapContainer, Marker, Popup, TileLayer, useMap } from "react-leaflet";
+
+// Fix the default icon issue
+delete L.Icon.Default.prototype._getIconUrl;
+L.Icon.Default.mergeOptions({
+  iconUrl: markerIcon,
+  iconRetinaUrl: markerIcon2x,
+  shadowUrl: markerShadow,
+});
 
 const MapController = ({ coordinates, onLoad }) => {
   const map = useMap();
